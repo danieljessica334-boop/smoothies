@@ -38,10 +38,10 @@ ingredients_list = st.multiselect(
     max_selections=5
 )
 
-
-if ingredients_list:
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
     st.text(smoothiefroot_response)
+if ingredients_list:
+
 
     ingredients_string = ''
 
