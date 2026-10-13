@@ -1,5 +1,4 @@
 ##blah blah
-
 snowflake-snowpark-python
 streamlit
 requests
