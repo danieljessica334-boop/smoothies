@@ -38,8 +38,6 @@ ingredients_list = st.multiselect(
     max_selections=5
 )
 
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-st.text(smoothiefroot_response)
 
 if ingredients_list:
     # st.write(ingredients_list)
@@ -50,6 +48,8 @@ if ingredients_list:
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
 
+    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
+    st.text(smoothiefroot_response)
     st.write(ingredients_string)
 
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
