@@ -30,6 +30,8 @@ ingredients_list = st.multiselect(
     max_selections=5
     )
 
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen)  
+sf_df = st.dataframe(data=smoothiefroot_response,use_container_width=True)
 
 if ingredients_list:
     ingredients_string = ''
