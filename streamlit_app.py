@@ -61,7 +61,7 @@ except Exception as ex:
     st.error(f"An error occurred: {str(ex)}")
 
 # Display a link
-st.write("https://github.com/appuv")
+#st.write("https://github.com/appuv")
 
 
 # # Import python packages
