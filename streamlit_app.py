@@ -51,9 +51,11 @@ if ingredients_list:
       
         my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
                         values ('""" + ingredients_string + """','""""" + name_on_order + """')"""
-    #    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-    #    st.text(smoothiefroot_response.json())      
-        # st.write(my_insert_stmt)
+
+
+
+
+      
     
         time_to_insert = st.button('Submit Order')
 
