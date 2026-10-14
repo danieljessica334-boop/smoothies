@@ -35,8 +35,7 @@ ingredients_list = st.multiselect(
     my_dataframe,
     max_selections=5
     )
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-st.text(smoothiefroot_response.json())
+
 
 if ingredients_list:
 
@@ -57,6 +56,8 @@ if ingredients_list:
 #    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
 #    st.text(smoothiefroot_response.json())      
     # st.write(my_insert_stmt)
+    smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
+    st.text(smoothiefroot_response.json())
     time_to_insert = st.button('Submit Order')
 
     if time_to_insert:
